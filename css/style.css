@@ -716,6 +716,38 @@ a {
   align-self: flex-end;
 }
 
+/*------- Модальное окно "Напишите нам "------- */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 31%;
+  bottom: 50%;
+  right: 40%;
+  right: auto;
+  display: inline-block;
+}
+
+.modal-write-us__login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: repeat(auto, 2);
+  grid-template-areas: "client__data client__data" "Client-text-mail Client-text-mail";
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  background-color: var(--basic-white);
+  padding: 50px;
+  min-height: 550px;
+  min-width: 960px;
+}
+
+.client__data {
+  grid-area: client__data;
+}
+
+.Client-text-mail {
+  grid-area: Client-text-mail;
+}
+
 /* Страница catalog.html */
 
 /* section container-center */
