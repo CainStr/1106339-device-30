@@ -28,6 +28,7 @@
 
 :root {
   --basic-black: #000000;
+  --opacity-black: rgba(0, 0, 0, 0.3);
   --basic-dark: #363636;
   --basic-white: #FFFFFF;
   --basic-grey: #464646;
@@ -35,7 +36,7 @@
   --basic-grey-light: #E5E5E5;
   --special-yellow: #F7E296;
   --special-green: #91C92F;
-  --special-yellow-dark: #F0C52E;
+  --special-yellow-dark: #f0c62ee8;
   --status: #F6DADA;
   --button-background: rgba(238, 238, 238, 0.7);
   --common-Gilroy: "Gilroy", "Arial", "Verdana", sans-serif;
@@ -105,6 +106,7 @@ a {
   display: flex;
   min-height: 40px;
   line-height: 40px;
+  position: relative;
 }
 
 /* Общие кнопки header/footer */
@@ -174,7 +176,7 @@ a {
   margin-left: 130px;
 }
 
-.catalog-navigation__list {
+.index-navigation__list {
   grid-area: main-navigation__list;
   display: flex;
   flex-wrap: wrap;
@@ -183,9 +185,96 @@ a {
   margin-left: auto;
 }
 
+.catalog-navigation__list {
+  grid-area: main-navigation__list;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  /* position: relative; */
+}
+
+.index-client__login {
+  margin-right: auto;
+  padding-left: 5px;
+  position: absolute;
+}
+
+.index-client-button__login {
+  display: block;
+  padding-left: 20px;
+  width: 40px;
+}
+
+.index-client-button__login:hover {
+  opacity: 10%;
+}
+
+.index-client-button__login::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/index/svg/icon_user.svg);
+  width: 20px;
+  height: 18px;
+  left: 1px;
+  top: 4px;
+  background-repeat: no-repeat;
+}
+
 .catalog-client__login {
+  display: block;
+  width: 15px;
+  position: 20px;
   margin-left: 26px;
   margin-right: auto;
+}
+
+.index-client-button__checkout {
+  margin-left: -30px;
+}
+
+.index-client__compare {
+  margin-left: auto;
+}
+
+.index-client-button__compare {
+  margin-right: 11px;
+  display: block;
+  position: relative;
+}
+
+.index-client-button__compare::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: url(../img/index/svg/icon_compare.svg);
+  width: 10px;
+  height: 10px;
+  top: 7px;
+  left: -25px;
+}
+
+.index-client__basket {
+  display: block;
+  /* position: absolute; */
+}
+
+.index-client-button__basket {
+  margin-left: 54px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.index-client-button__basket::before {
+  content: "";
+  background-image: url(../img/index/svg/icon_cart.svg);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  left: -23px;
 }
 
 .catalog-client-button__checkout {
@@ -367,6 +456,40 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 30px;
+  position: relative;
+  z-index: 0;
+  width: 220px;
+  height: 40px;
+}
+
+.button-more:active {
+  color: var(--opacity-black);
+}
+
+.button-more:before {
+  content: "";
+  display: block;
+  width: 220px;
+  height: 8px;
+  top: 15px;
+  left: -42px;
+  z-index: -1;
+  align-content: center;
+  background-color: #F0C52E;
+  position: absolute;
+}
+
+.button-more:hover:before {
+  background-color: var(--special-yellow-dark);
+  width: 220px;
+  height: 40px;
+  z-index: -1;
+  left: -42px;
+  top: 0;
+}
+
+.button-more:hover:active:before.button-more {
+  color: #91C92F;
 }
 
 .item-specifications {
@@ -448,6 +571,15 @@ a {
   background-repeat: no-repeat;
 }
 
+.services-list__link {
+  color: var(--basic-black)
+}
+
+.services-list__link:hover::before {
+  background-color: var(--special-yellow-dark);
+}
+
+
 .services-list__link-vr::before {
   background-image: url(../img/index/svg/vr.svg);
 }
@@ -474,9 +606,25 @@ a {
 
 /* section features-button*/
 
-.features-buttons__item:hover {
-  color: var(--special-yellow-dark);
-  background-color: var(--basic-black);
+.features-buttons__item {
+  border: none;
+  background-color: transparent;
+}
+
+.features-buttons__list {
+  position: relative;
+  z-index: 0;
+}
+
+.features-buttons__item::before {
+  content: "";
+  background-color: var(--special-yellow-dark);
+  z-index: -1;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  top: 16px;
+  position: absolute;
 }
 
 /* РАЗДЕЛ features */
@@ -491,7 +639,7 @@ a {
 
 .features .container {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "features-buttons__list features__item-active ";
   margin-top: 42px;
