@@ -10,16 +10,17 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="js/main.js"></script>
 </head>
 
 <body class="page-body">
   <div class="container">
     <header class="main-header">
-      <a href="index.html" class="main-header__logo"><img src="img/index/svg/logo_device.svg" width="163" height="35"
-          alt="Логотип Device"></a>
+      <a href="index.html" class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163"
+          height="35" alt="Логотип Device"></a>
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <input class="search-form__input" type="search" placeholder="Поиск по сайту">
-        <button class="search-form__button" type="submit">Найти</button>
+        <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
+        <button class="search-form__button button" type="submit">Найти</button>
       </form>
       <nav class="main-navigation">
 
@@ -71,7 +72,7 @@
         <!-- Этот заголовок будет скрыт в css -->
         <h2 class="visually-hidden"> Слайдер </h2>
         <ol class="main-slider__list list">
-          <li class="main-slider__item_active">
+          <li class="main-slider__item main-slider__item_active">
             <img class="slider__img" src="img/index/png/slider_1_selfi.png" width="384" height="486" alt="Селфи палка">
 
             <p class="main-slider__title">Делай селфи,<br> как Бен Стиллер!</p>
@@ -122,10 +123,10 @@
             </div>
           </li>
         </ol>
-        <ul class="main-slider__button list">
-          <li class="button-left"><button type="button"></button></li>
-          <li class="button-center"><button type="button"></button></li>
-          <li class="button-right"><button type="button"></button></li>
+        <ul class="main-slider__buttons  list">
+          <li><button class="button-left button  main-slider__button" type="button"></button></li>
+          <li><button class="button-center button main-slider__button" type="button"></button></li>
+          <li><button class="button-right button main-slider__button" type="button"></button></li>
         </ul>
       </section>
       <section class="services">
@@ -172,32 +173,36 @@
       <div class="container">
         <aside class="features-buttons ">
           <ul class="features-buttons__list list">
-            <li><button class="features-buttons__item button-link" type="button">Доставка</button> </li>
-            <li><button class="features-buttons__item button-link" type="button">Гарантия</button></li>
-            <li><button class="features-buttons__item button-link" type="button">Кредит</button></li>
+            <li class="features-buttons__item-active"><button class="features-buttons__item button button-link"
+                type="button">Доставка</button> </li>
+            <li><button class="features-buttons__item button button-link" type="button">Гарантия</button></li>
+            <li><button class="features-buttons__item button button-link" type="button">Кредит</button></li>
           </ul>
         </aside>
         <ul class="features__list list">
-          <li class="features__item features__item-active ">
-            <h3 class="features__title"> Доставка</h3>
-            <p class="features__subtitle">Мы с удовольствием доставим ваш товар прямо к вашему
-              подъезду совершенно бесплатно! Ведь мы неплохо
-              заработаем, поднимая его на ваш этаж.</p>
-            <!-- <img src="img/index/svg/delivery.svg" width="136" height="164"> -->
+          <li class="features__item   features__item-active">
+            <div class="features__item-delivery">
+              <h3 class="features__title"> Доставка</h3>
+              <p class="features__subtitle ">Мы с удовольствием доставим ваш товар прямо к вашему
+                подъезду совершенно бесплатно! Ведь мы неплохо
+                заработаем, поднимая его на ваш этаж.</p>
+            </div>
+          </li>
+          <li class="features__item ">
+            <div class="features__item-warranty">
+              <h3 class="features__title"> Гарантия</h3>
+              <p class="features__subtitle">Если из-за возгорания купленного у нас товара у вас сгорит дом —
+                не переживайте, мы выдадим вам новый.
+                Товар, не дом, конечно же.</p>
+            </div>
           </li>
           <li class="features__item">
-            <h3 class="features__title"> Гарантия</h3>
-            <p class="features__subtitle">Если из-за возгорания купленного у нас товара у вас сгорит дом —
-              не переживайте, мы выдадим вам новый.
-              Товар, не дом, конечно же.</p>
-            <!-- <img src="img/index/svg/warranty.svg" width="171" height="195"> -->
-          </li>
-          <li class="features__item">
-            <h3 class="features__title"> Кредит</h3>
-            <p class="features__subtitle">Залезть в долговую яму стало проще! Кредитные консультанты
-              подберут для вас наиболее выгодные
-              условия кредита. Выгодные для нашего банка, разумеется.</p>
-            <!-- <img src="img/index/svg/credit.svg" width="156" height="188"> -->
+            <div class="features__item-credit ">
+              <h3 class="features__title"> Кредит</h3>
+              <p class="features__subtitle">Залезть в долговую яму стало проще! Кредитные консультанты
+                подберут для вас наиболее выгодные
+                условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -207,20 +212,20 @@
       <h2 class="visually-hidden">Логотипы партнеров магазина</h2>
       <ul class="partners__list list">
         <li>
-          <a href="blank.html"> <img class="partners__dji" src="img/index/jpeg/logo_1.jpg" width="260" height="100"
-              alt="Логотип партнера Dji"></a>
+          <a href="blank.html"> <img class="image partners__dji" src="img/index/jpeg/logo_1.jpg" width="260"
+              height="100" alt="Логотип партнера Dji"></a>
         </li>
         <li>
-          <a href="blank.html"><img class="partners__spgadgets" src="img/index/jpeg/logo_2.jpg" width="260" height="100"
-              alt="Логотип партнера Spgadgets"></a>
+          <a href="blank.html"><img class="image partners__spgadgets" src="img/index/jpeg/logo_2.jpg" width="260"
+              height="100" alt="Логотип партнера Spgadgets"></a>
         </li>
         <li>
-          <a href="blank.html"> <img class="partners__gopro" src="img/index/jpeg/logo_3.jpg" width="260" height="100"
-              alt="Логотип партнера Gopro"></a>
+          <a href="blank.html"> <img class="image partners__gopro" src="img/index/jpeg/logo_3.jpg" width="260"
+              height="100" alt="Логотип партнера Gopro"></a>
         </li>
         <li>
-          <a href="blank.html"><img class="partners__vive" src="img/index/jpeg/logo_4.jpg" width="260" height="100"
-              alt="Логотип партнера Vive"></a>
+          <a href="blank.html"><img class="image partners__vive" src="img/index/jpeg/logo_4.jpg" width="260"
+              height="100" alt="Логотип партнера Vive"></a>
         </li>
       </ul>
     </section>
@@ -228,7 +233,7 @@
       <!-- Заголовок будет скрыт  в css  -->
       <h2 class="visually-hidden"> Полезная информация </h2>
       <section class="about-us">
-        <h2 class="information__title">О нас</h2>
+        <h2 class="information__title ">О нас</h2>
         <p class="information__subtitle">Огромный выбор гаджетов не оставит равнодушным гика,
           который есть в каждом из нас.
         </p>
@@ -244,13 +249,13 @@
         <a class="about-us__button button-link" href="index.html">Подробнее о нас </a>
       </section>
       <section class="contacts">
-        <h2 class="information__title ">Контакты</h2>
+        <h2 class="information__title">Контакты</h2>
         <p class="information__subtitle">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.</p>
         <a class="map-link"
           href="https://www.google.com/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
           <img src="img/index/map.jpg" width="560" height="222" alt="Точка нахождения магазина Device на карте "></a>
-        <a class="contacts-button button-link" href="index.html">Напишите нам</a>
+        <a class="contacts-button button-link" id="writeUs" href="index.html">Напишите нам</a>
 
       </section>
     </section>
@@ -259,7 +264,7 @@
 
   <footer class="main-footer ">
     <div class="container">
-      <img class="main-footer__logo logo" src="img/index/svg/logo_device.svg" width="163" height="35"
+      <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163" height="35"
         alt="Логотип DEVICE">
       <p class="main-footer__address ">г. Москва, ул. Строителей, 15 </p>
       <ul class="main-footer__navigation client-navigation list">
@@ -273,35 +278,53 @@
         <li class="main-footer__twitter"><a href="blank.html"></a></li>
       </ul>
       <ul class="main-footer__client-navigation client-button list">
-        <li class="login"><a class="main-footer__client-button" href="index.html">Войти</a></li>
-        <li class="compare"><a class="main-footer__client-button" href="catalog.html">Сравнить</a></li>
-        <li class="basket"><a class="main-footer__client-button" href="index.html">Корзина</a></li>
+        <li class="login"><a class="main-footer__client-button  main-footer__client-button__login"
+            href="index.html">Войти</a></li>
+        <li class="compare"><a class="main-footer__client-button main-footer__client-button__compare"
+            href="catalog.html">Сравнить</a></li>
+        <li class="basket"><a class="main-footer__client-button main-footer__client-button__basket"
+            href="index.html">Корзина</a></li>
       </ul>
       <p class="main-footer__contacts">Тел. :<a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <a class="logo-html-academy" href="https://htmlacademy.ru/intensive/htmlcss"><img
+      <a class="logo-html-academy logo" href="https://htmlacademy.ru/intensive/htmlcss"><img
           src="img/index/svg/logo_html.svg" width="27" height="34" alt="Ссылка на курсы htmlacademy"></a>
     </div>
   </footer>
 
   </section>
-  <!--
-<section class="modal-write-us modal">
-  <h2 class="visually-hidden">Всплывающая форма </h2>
-  <form class="modal-write-us__login-form" action="#" method="post">
-    <div class="client__data">
-    <label class="modal-write-us__name" for="name">Ваше имя:</label>
-    <input id="name" placeholder="Имя Фамилия">
-    <label class="modal-write-us__email" for="email">Ваш e-mail:</label>
-    <input id="email" type="email" placeholder="email@example.com">
-    </div>
-    <div class="Client-text-mail">
-    <label class="modal-write-us__text" for="textMail">Текст письма: </label>
-    <textarea id="textMail" placeholder="В свободной форме"></textarea>
-    </div>
-    <button class="modal-write-us__button-send" type="button">Отправить</button>
-    <button class="modal-write-us__button-exit" type="button">Закрыть</button>
-  </form> -->
 
+  <section class="modal-write-us modal " id="modalWriteUs">
+    <h2 class="visually-hidden">Всплывающая форма </h2>
+
+
+    <form class="modal-write-us__login-form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <div class="modal-name">
+
+        <div class="modal-input">
+          <label class="modal-write-us__name" for="name">Ваше имя:</label>
+          <input id="name" placeholder="Имя Фамилия">
+        </div>
+
+        <div class="modal-input">
+
+          <label class="modal-write-us__email" for="email">Ваш e-mail:</label>
+          <input id="email" type="email" placeholder="email@example.com">
+
+        </div>
+
+      </div>
+      <div class="modal-text">
+
+        <label class="modal-write-us__text" for="textMail">Текст письма: </label>
+        <textarea class="textaria" id="textMail" placeholder="В свободной форме"></textarea>
+
+      </div>
+      </div>
+      <button class="modal-write-us__button-send button-link button" type="submit">Отправить</button>
+      <button class="modal-write-us__button-exit button" id="modalClose" type="button"></button>
+    </form>
+  </section>
 
 </body>
 
