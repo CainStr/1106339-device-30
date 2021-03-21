@@ -19,7 +19,7 @@
       <a href="index.html" class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163"
           height="35" alt="Логотип Device"></a>
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
+        <input class="search-form__input button" type="search" name="search" placeholder="Поиск по сайту">
         <button class="search-form__button button" type="submit">Найти</button>
       </form>
       <nav class="main-navigation">
@@ -81,7 +81,7 @@
               <a class="crumbs-link__item" href="catalog.html">Каталог товаров </a>
             </li>
             <li>
-              <a class="crumbs-link__item  crumbs-link_activated" href="catalog.html"> Моноподы для селфи</a>
+              <a class="crumbs-link__item  crumbs-link_activated" href="blank.html"> Моноподы для селфи</a>
             </li>
           </ul>
         </nav>
@@ -95,26 +95,26 @@
           <input type="range" min="0" max=10000 step=1 value="50">
         </fieldset>
         <fieldset class="filter__color">
-          <legend class="filter__subtitle">Цвет</legend>
+          <legend class="filter__subtitle filter-color-padding">Цвет</legend>
           <ul class="filter-list list">
-            <li class="filter-list_active">
-              <input type="checkbox" id="black" name="black" checked>
+            <li>
+              <input type="checkbox" class="custom-checkbox" id="black" name="black" checked>
               <label for="black">Чёрный</label>
             </li>
-            <li class="filter-list_deactivate">
-              <input type="checkbox" id="white" name="white">
+            <li>
+              <input type="checkbox" class="custom-checkbox" id="white" name="white">
               <label for="white">Белый</label>
             </li>
             <li>
-              <input type="checkbox" id="blue" name="blue" checked>
+              <input type="checkbox" class="custom-checkbox" id="blue" name="blue" checked>
               <label for="blue">Синий</label>
             </li>
             <li>
-              <input type="checkbox" id="red" name="red" checked>
+              <input type="checkbox" class="custom-checkbox" id="red" name="red" checked>
               <label for="red">Красный</label>
             </li>
             <li>
-              <input type="checkbox" id="rose" name="rose">
+              <input type="checkbox" class="custom-checkbox" id="rose" name="rose">
               <label for="rose">Розовый</label>
             </li>
           </ul>
@@ -123,16 +123,16 @@
           <legend class="filter__subtitle">Bluetooth</legend>
           <ul class="filter-list filter-radio list">
             <li class="filter-radio_active">
-              <input type="radio" name="Bluetooth" id="yes" checked>
-              <label for="yes">Есть</label>
+              <input type="radio" class="custom-radio" name="bluetooth" id="yes" checked>
+              <label for="yes"><span>Есть</span></label>
             </li>
             <li>
-              <input type="radio" name="Bluetooth" id="no">
+              <input type="radio" class="custom-radio" name="bluetooth" id="no">
               <label for="no">Нет</label>
             </li>
           </ul>
         </fieldset>
-        <button class="filter__buttons button button-link" type="submit">Показать</button>
+        <button class="filter__buttons  button button-link" type="submit">Показать</button>
       </form>
 
     </section>
@@ -154,9 +154,9 @@
         <li class="products-list__item products-list__item_active">
           <div class="container__item">
             <img src="img/catalog/jpeg/item_1.jpg" width="360" height="381" alt="Любительская селфи-палка">
-            <div class="product-buttons product-buttons__active">
-              <button class="products-list__button button-link" type="button">В корзину</button>
-              <button class="products-list__comparison" type="button">Добавить к сравнению</button>
+            <div class="product-buttons product-buttons__active ">
+              <button class="products-list__button button button-link" type="button">В корзину</button>
+              <button class="products-list__comparison button" type="button">Добавить к сравнению</button>
             </div>
           </div>
           <dl class="product__option">
@@ -173,7 +173,7 @@
             <img src="img/catalog/jpeg/item_2.jpg" width="360" height="381" alt="Профессиональная селфи-палка">
 
             <div class="product-buttons">
-              <button class="products-list__button button button-link" type="button">В корзину</button>
+              <button class="products-list__button button button button-link" type="button">В корзину</button>
               <button class="products-list__comparison  button" type="button">Добавить к сравнению</button>
             </div>
           </div>
@@ -190,8 +190,8 @@
           <div class="container__item">
             <img src="img/catalog/jpeg/item_3.jpg" width="360" height="381" alt="Непотопляемая селфи-палка">
             <div class="product-buttons">
-              <button class="products-list__button button-link" type="button">В корзину</button>
-              <button class="products-list__comparison " type="button">Добавить к сравнению</button>
+              <button class="products-list__button button button-link" type="button">В корзину</button>
+              <button class="products-list__comparison button" type="button">Добавить к сравнению</button>
             </div>
           </div>
           <dl class="product__option">
@@ -204,11 +204,11 @@
           </dl>
         </li>
         <li class="products-list__item">
-          <div class="container__item">
+          <div class="container__item container__item-new">
             <img src="img/catalog/jpeg/item_4.jpg" width="360" height="381" alt="Селфи-палка «Следуй за мной»">
             <div class="product-buttons">
-              <button class="products-list__button button-link" type="button">В корзину</button>
-              <button class="products-list__comparison " type="button">Добавить к сравнению</button>
+              <button class="products-list__button button button-link" type="button">В корзину</button>
+              <button class="products-list__comparison button " type="button">Добавить к сравнению</button>
             </div>
           </div>
           <dl class="product__option">
@@ -239,8 +239,8 @@
 
   <footer class="main-footer ">
     <div class="container">
-      <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163" height="35"
-        alt="Логотип DEVICE">
+     <a href="index.html"> <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163" height="35"
+        alt="Логотип DEVICE"></a>
       <p class="main-footer__address ">г. Москва, ул. Строителей, 15 </p>
       <ul class="main-footer__navigation client-navigation list">
         <li><a class="client-navigation__item" href="index.html ">доставка</a></li>
@@ -248,12 +248,12 @@
         <li><a class="client-navigation__item" href="index.html">контакты</a></li>
       </ul>
       <ul class="main-footer__social-buttons list">
-        <li class="main-footer__facebook"><a href="blank.html"></a></li>
-        <li class="main-footer__instagram"><a href="blank.html"></a></li>
-        <li class="main-footer__twitter"><a href="blank.html"></a></li>
+        <li><a class="main-footer__facebook" href="blank.html"></a></li>
+        <li><a class="main-footer__instagram" href="blank.html"></a></li>
+        <li><a class="main-footer__twitter"href="blank.html"></a></li>
       </ul>
       <ul class="main-footer__client-navigation client-button list">
-        <li><a class="main-footer__client-button client-login" href="index.html">Валентин Петухов</a></li>
+        <li><a class="main-footer__client-button client-login" href="blank.html">Валентин Петухов</a></li>
         <li class="client-logout"><a class="main-footer__client-button" href="index.html">Выйти</a></li>
         <li class="compare"><a class="main-footer__client-button main-footer__client-button__compare"
             href="catalog.html">Сравнить</a></li>

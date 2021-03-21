@@ -16,10 +16,10 @@
 <body class="page-body">
   <div class="container">
     <header class="main-header">
-      <a href="index.html" class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163"
+      <a  class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163"
           height="35" alt="Логотип Device"></a>
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <input class="search-form__input" type="search" name="search" placeholder="Поиск по сайту">
+        <input class="search-form__input " type="search" name="search" placeholder="Поиск по сайту">
         <button class="search-form__button button" type="submit">Найти</button>
       </form>
       <nav class="main-navigation">
@@ -79,7 +79,7 @@
             <p class="main-slider__subtitle"> Самая длинная палка для селфи доступна в нашем магазине.<br>
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
             <a class="button-more button-link" href="catalog.html">Подробнее</a>
-            <dl class="item-specifications">
+            <dl class="item-specifications list">
               <dt class="item-specifications__subtitle">Длина полки</dt>
               <dd class="item-specifications__value">8,5 м</dd>
               <dt class="item-specifications__subtitle">Вес палки</dt>
@@ -124,7 +124,8 @@
           </li>
         </ol>
         <ul class="main-slider__buttons  list">
-          <li><button class="button-left button  main-slider__button" type="button"></button></li>
+          <li><button class="button-left button  main-slider__button main-slider__button-active" type="button"></button>
+          </li>
           <li><button class="button-center button main-slider__button" type="button"></button></li>
           <li><button class="button-right button main-slider__button" type="button"></button></li>
         </ul>
@@ -173,7 +174,7 @@
       <div class="container">
         <aside class="features-buttons ">
           <ul class="features-buttons__list list">
-            <li class="features-buttons__item-active"><button class="features-buttons__item button button-link"
+            <li class=""><button class="features-buttons__item features-buttons__item-active button button-link"
                 type="button">Доставка</button> </li>
             <li><button class="features-buttons__item button button-link" type="button">Гарантия</button></li>
             <li><button class="features-buttons__item button button-link" type="button">Кредит</button></li>
@@ -241,10 +242,10 @@
           Мы можем доставить ваш товар в самые отдаленные точки
           России! DEVICE работает со многими транспортными компаниями:
         </p>
-        <ul class="about-us__delivery-partners">
+        <ul class="about-us__delivery-partners list">
           <li class="about-us__item">Деловые линии</li>
           <li class="about-us__item">Автотрейдинг</li>
-          <li class="about-us__item"> ЖелДорЭкспедиция</li>
+          <li class="about-us__item">ЖелДорЭкспедиция</li>
         </ul>
         <a class="about-us__button button-link" href="index.html">Подробнее о нас </a>
       </section>
@@ -254,7 +255,7 @@
           проверить работоспособность покупки. Всякое бывает.</p>
         <a class="map-link"
           href="https://www.google.com/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
-          <img src="img/index/map.jpg" width="560" height="222" alt="Точка нахождения магазина Device на карте "></a>
+          <img src="img/index/map.jpg" width="560" height="222" id="mapBig" alt="Точка нахождения магазина Device на карте "></a>
         <a class="contacts-button button-link" id="writeUs" href="index.html">Напишите нам</a>
 
       </section>
@@ -273,9 +274,9 @@
         <li><a class="client-navigation__item" href="index.html">контакты</a></li>
       </ul>
       <ul class="main-footer__social-buttons list">
-        <li class="main-footer__facebook"><a href="blank.html"></a></li>
-        <li class="main-footer__instagram"><a href="blank.html"></a></li>
-        <li class="main-footer__twitter"><a href="blank.html"></a></li>
+        <li><a class="main-footer__facebook" href="blank.html"></a></li>
+        <li><a class="main-footer__instagram" href="blank.html"></a></li>
+        <li><a class="main-footer__twitter" href="blank.html"></a></li>
       </ul>
       <ul class="main-footer__client-navigation client-button list">
         <li class="login"><a class="main-footer__client-button  main-footer__client-button__login"
@@ -286,7 +287,7 @@
             href="index.html">Корзина</a></li>
       </ul>
       <p class="main-footer__contacts">Тел. :<a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <a class="logo-html-academy logo" href="https://htmlacademy.ru/intensive/htmlcss"><img
+      <a class="logo-html-academy logo" id="mapBig" href="https://htmlacademy.ru/intensive/htmlcss"><img
           src="img/index/svg/logo_html.svg" width="27" height="34" alt="Ссылка на курсы htmlacademy"></a>
     </div>
   </footer>
@@ -303,13 +304,13 @@
 
         <div class="modal-input">
           <label class="modal-write-us__name" for="name">Ваше имя:</label>
-          <input id="name" placeholder="Имя Фамилия">
+          <input id="name" name="name" placeholder="Имя Фамилия">
         </div>
 
         <div class="modal-input">
 
           <label class="modal-write-us__email" for="email">Ваш e-mail:</label>
-          <input id="email" type="email" placeholder="email@example.com">
+          <input  class="input-email" id="email" name="email" type="email" placeholder="email@example.com">
 
         </div>
 
@@ -325,6 +326,15 @@
       <button class="modal-write-us__button-exit button" id="modalClose" type="button"></button>
     </form>
   </section>
+  <section class="modal-map list" id="modalMap">
+    <a
+      href="https://www.google.com/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
+
+      </a>
+      <button class="modal-map__button-exit button" type="button" id="modalMapClose" ></button>
+
+  </section>
+
 
 </body>
 

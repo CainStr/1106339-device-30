@@ -12,4 +12,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
   })
 });
-// writeUs
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  console.log("ok");
+  const mapBig = document.getElementById("mapBig")
+  const modalMap=document.getElementById("modalMap")
+  mapBig.addEventListener("click", (event)=>{
+    modalMap.classList.add("visible")
+    event.preventDefault();
+    const modalMapClose=document.getElementById("modalMapClose")
+    modalMapClose.addEventListener("click",()=>{
+      modalMap.classList.remove("visible");
+    })
+  })
+});
