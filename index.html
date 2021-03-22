@@ -10,7 +10,6 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  <script src="js/main.js"></script>
 </head>
 
 <body class="page-body">
@@ -19,7 +18,8 @@
       <a class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163" height="35"
           alt="Логотип Device"></a>
       <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
-        <input class="search-form__input " type="search" name="search" placeholder="Поиск по сайту">
+        <input class="search-form__input button" type="search" name="search" id="search" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="search"> Поиск по сайту</label>
         <button class="search-form__button button" type="submit">Найти</button>
       </form>
       <nav class="main-navigation">
@@ -38,6 +38,7 @@
         <div class="header-navigation__item">
           <a class="client-navigation__catalog client-navigation" href="catalog.html">Каталог товаров</a>
           <section class="drop-down-directory">
+            <h2 class="visually-hidden">Выпадающее меню</h2>
             <ul class="camera-list  list">
               <li class="drop-down-directory__item"><a href="catalog.htm">Виртуальная реальность</a></li>
               <li class="drop-down-directory__item"><a href="catalog.htm">Моноподы для селфи</a></li>
@@ -161,7 +162,7 @@
         </ul>
       </section>
     </div>
-    </div>
+
     <section class="features">
       <h2 class="visually-hidden">Услуги, предоставляемым магазином </h2>
       <div class="container">
@@ -280,12 +281,10 @@
             href="index.html">Корзина</a></li>
       </ul>
       <p class="main-footer__contacts">Тел. :<a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
-      <a class="logo-html-academy logo" id="mapBig" href="https://htmlacademy.ru/intensive/htmlcss"><img
+      <a class="logo-html-academy logo" href="https://htmlacademy.ru/intensive/htmlcss"><img
           src="img/index/svg/logo_html.svg" width="27" height="34" alt="Ссылка на курсы htmlacademy"></a>
     </div>
   </footer>
-
-  </section>
 
   <section class="modal-write-us modal " id="modalWriteUs">
     <h2 class="visually-hidden">Всплывающая форма </h2>
@@ -314,12 +313,13 @@
         <textarea class="textaria" id="textMail" placeholder="В свободной форме"></textarea>
 
       </div>
-      </div>
+
       <button class="modal-write-us__button-send button-link button" type="submit">Отправить</button>
       <button class="modal-write-us__button-exit button" id="modalClose" type="button"></button>
     </form>
   </section>
   <section class="modal-map list" id="modalMap">
+    <h2 class="visually-hidden">Окно карты</h2>
     <a
       href="https://www.google.com/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
 
@@ -328,7 +328,7 @@
 
   </section>
 
-
+  <script src="js/main.js"></script>
 </body>
 
 </html>

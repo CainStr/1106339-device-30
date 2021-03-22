@@ -1512,7 +1512,7 @@ a {
   font-weight: 800;
   line-height: 17px;
   line-height: 17px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   letter-spacing: .1em;
 }
 
@@ -1732,6 +1732,7 @@ a {
 }
 
 .products-list__button {
+  outline: transparent;
   transition: height 300ms;
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -8,74 +8,134 @@
   <link rel="icon" href="img/faviconsvg.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-
-  <header>
-    <nav>
-      <a href="index.html"><img src="img/index/svg/logo_device.svg" width="163" height="35" alt="Логотип Device"></a>
-      <form action="https://echo.htmlacademy.ru/" method="get">
-        <input type="search" placeholder="Поиск по сайу">
-        <button type="submit">Найти</button>
+<body class="page-body">
+  <div class="container">
+    <header class="main-header">
+      <a class="main-header__logo logo"><img src="img/index/svg/logo_device.svg" width="163" height="35"
+          alt="Логотип Device"></a>
+      <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+        <input class="search-form__input " type="search" name="search" id="search" placeholder="Поиск по сайту">
+        <label class="visually-hidden" for="search"> Поиск по сайту</label>
+        <button class="search-form__button button" type="submit">Найти</button>
       </form>
-      <a href="blank.html">Войти</a>
-      <ul>
-        <li>
-          <a href="blank.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="blank.html">Корзина</a>
-        </li>
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
-        </li>
-        <li>
-          <a href="blank.html">Доставка</a>
-        </li>
-        <li>
-          <a href="blank.html">Гарантия</a>
-        </li>
-        <li>
-          <a href="blank.html">Контакты</a>
-        </li>
+      <nav class="main-navigation">
+
+        <ul class="index-navigation__list  list">
+          <li class="index-client__login  "><a class="index-client-button__login client-button"
+              href="blank.html">Войти</a></li>
+
+          <li class="index-client__compare "><a class="index-client-button__compare  client-button"
+              href="blank.html">Сравнить</a></li>
+          <li class="index-client__basket"><a class="index-client-button__basket  client-button"
+              href="blank.html">Корзина</a></li>
+        </ul>
+      </nav>
+      <nav class="header-navigation list">
+        <div class="header-navigation__item">
+          <a class="client-navigation__catalog client-navigation" href="catalog.html">Каталог товаров</a>
+          <section class="drop-down-directory">
+            <h2 class="visually-hidden">Выпадающее меню</h2>
+            <ul class="camera-list  list">
+              <li class="drop-down-directory__item"><a href="catalog.htm">Виртуальная реальность</a></li>
+              <li class="drop-down-directory__item"><a href="catalog.htm">Моноподы для селфи</a></li>
+              <li class="drop-down-directory__item"><a href="catalog.htm">Экшн-камеры</a></li>
+            </ul>
+            <ul class="wrist-gadgets list">
+              <li class="drop-down-directory__item"><a href="catalog.htm">Фитнес-браслеты</a></li>
+              <li class="drop-down-directory__item"><a href="catalog.htm">Умные часы </a></li>
+            </ul>
+            <ul class="flying-gadgets list">
+              <li class="drop-down-directory__item"><a href="catalog.htm">Квадрокоптер</a></li>
+            </ul>
+          </section>
+        </div>
+        <ul class="header-navigation__list list">
+          <li class="client-navigation__delivery"><a class="client-navigation" href="blank.html">Доставка</a></li>
+          <li class="client-navigation__warranty"><a class="client-navigation" href="blank.html">Гарантия</a></li>
+          <li class="client-navigation__contacts"><a class="client-navigation" href="blank.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+  </div>
+
+
+  <footer class="main-footer ">
+    <div class="container">
+      <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163" height="35"
+        alt="Логотип DEVICE">
+      <p class="main-footer__address ">г. Москва, ул. Строителей, 15 </p>
+      <ul class="main-footer__navigation client-navigation list">
+        <li><a class="client-navigation__item" href="index.html ">доставка</a></li>
+        <li><a class="client-navigation__item" href="catalog.html">гарантия</a></li>
+        <li><a class="client-navigation__item" href="index.html">контакты</a></li>
       </ul>
-    </nav>
-  </header>
+      <ul class="main-footer__social-buttons list">
+        <li><a class="main-footer__facebook" href="blank.html"></a></li>
+        <li><a class="main-footer__instagram" href="blank.html"></a></li>
+        <li><a class="main-footer__twitter" href="blank.html"></a></li>
+      </ul>
+      <ul class="main-footer__client-navigation client-button list">
+        <li class="login"><a class="main-footer__client-button  main-footer__client-button__login"
+            href="index.html">Войти</a></li>
+        <li class="compare"><a class="main-footer__client-button main-footer__client-button__compare"
+            href="catalog.html">Сравнить</a></li>
+        <li class="basket"><a class="main-footer__client-button main-footer__client-button__basket"
+            href="index.html">Корзина</a></li>
+      </ul>
+      <p class="main-footer__contacts">Тел. :<a href="tel:+74954959595">+7 (495) 495-95-95</a></p>
+      <a class="logo-html-academy logo" href="https://htmlacademy.ru/intensive/htmlcss"><img
+          src="img/index/svg/logo_html.svg" width="27" height="34" alt="Ссылка на курсы htmlacademy"></a>
+    </div>
+  </footer>
 
-  <main>
-    <!-- Тело -->
-  </main>
+  <section class="modal-write-us modal " id="modalWriteUs">
+    <h2 class="visually-hidden">Всплывающая форма </h2>
 
-    <footer>
-      <section>
-        <h2>Дополнительная информация</h2>
-        <img src="img/index/svg/logo_device.svg" width="163" height="35" alt="Логотип DEVICE" />
-        <address>г. Москва, ул. Строителей, 15 </address>
-        <ul>
-          <li><a href="index.html">доставка</a></li>
-          <li><a href="catalog.html">гарантия</a></li>
-          <li><a href="index.html">контакты</a></li>
-        </ul>
-        <!-- <ul>
-          <li><a href="blank.html"><img src="img/index/svg/facebook.svg" width="32" height="32" for="img"
-                alt="Ссылка на facebook"></a></li>
-          <li><a href="blank.html"><img src="img/index/svg/icon_instagram.svg" width="32" height="32"
-                alt="Ссылка на instagram"></a></li>
-          <li><a href="blank.html"><img src="img/index/svg/icon_witter.svg" width="32" height="32"
-                alt="Ссылка на twitter"></a></li>
-        </ul> -->
-        <ul>
-          <li><a href="index.html">Войти</a></li>
-          <li><a href="catalog.html">Сравнить</a></li>
-          <li><a href="index.html">Корзина</a></li>
-        </ul>
-        <p>Телефон:<a href="tel:+74954959595">+7(495) 495-95-95</a></p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/index/svg/logo_html.svg" width="27" height="34"
-            alt="Ссылка на курсы htmlacademy"></a>
-      </section>
 
-    </footer>
+    <form class="modal-write-us__login-form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <div class="modal-name">
+
+        <div class="modal-input">
+          <label class="modal-write-us__name" for="name">Ваше имя:</label>
+          <input id="name" name="name" placeholder="Имя Фамилия">
+        </div>
+
+        <div class="modal-input">
+
+          <label class="modal-write-us__email" for="email">Ваш e-mail:</label>
+          <input class="input-email" id="email" name="email" type="email" placeholder="email@example.com">
+
+        </div>
+
+      </div>
+      <div class="modal-text">
+
+        <label class="modal-write-us__text" for="textMail">Текст письма: </label>
+        <textarea class="textaria" id="textMail" placeholder="В свободной форме"></textarea>
+
+      </div>
+
+      <button class="modal-write-us__button-send button-link button" type="submit">Отправить</button>
+      <button class="modal-write-us__button-exit button" id="modalClose" type="button"></button>
+    </form>
+  </section>
+  <section class="modal-map list" id="modalMap">
+    <h2 class="visually-hidden">Окно карты</h2>
+    <a
+      href="https://www.google.com/maps/place/ул.+Строителей,+15,+Москва,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618">
+
+    </a>
+    <button class="modal-map__button-exit button" type="button" id="modalMapClose"></button>
+
+  </section>
+
 
 </body>
 
