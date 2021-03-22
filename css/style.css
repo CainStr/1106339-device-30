@@ -42,6 +42,7 @@
   --pagination-color: #D9D9D9;
   --modal-background-color: #F2F2F2;
   --modal-background-color-hover: #EAEAEA;
+  --disable-checkbox:#A6A6A6;
   --button-background: rgba(238, 238, 238, 0.7);
   --common-Gilroy: "Gilroy", "Arial", "Verdana", sans-serif;
   --common-OpenSans: "Open Sans", "Arial", "Verdana", sans-serif;
@@ -1590,6 +1591,10 @@ a {
 opacity: 1;
 }
 
+.custom-checkbox:disabled +label{
+ opacity: 0.6;
+  }
+
 /* ------radio------- */
 
 .custom-radio {
@@ -1607,6 +1612,10 @@ opacity: 1;
   position: relative;
   padding: 0 0 0 40px;
   cursor: pointer;
+}
+
+.custom-radio:disabled+label{
+  opacity: 0.6;
 }
 
 .custom-radio+label:hover {
