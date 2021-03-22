@@ -67,7 +67,6 @@
   </div>
 
   <main class="catalog__container-center">
-    <!-- будет заголовок будет скрыт в css -->
     <div class=" container main-crumbs-container">
       <h1 class="visually-hidden ">Каталог интернет-магазина Device</h1>
       <section class="main-crumbs">
@@ -81,7 +80,7 @@
               <a class="crumbs-link__item" href="catalog.html">Каталог товаров </a>
             </li>
             <li>
-              <a class="crumbs-link__item  crumbs-link_activated" href="blank.html"> Моноподы для селфи</a>
+              <a class="crumbs-link__item " href="blank.html"> Моноподы для селфи</a>
             </li>
           </ul>
         </nav>
@@ -139,15 +138,17 @@
     <section class="products">
       <h2 class="visually-hidden">Товары</h2>
       <div class="filter-crumbs__color">
-        <aside class="filter-crumbs">
-          <h2 class="filter-crumbs__title">сортировка:</h2>
-          <ul class="crumbs-links list">
-            <li class="crumbs-link__item crumbs-link_activated"><a>По цене</a></li>
-            <li class="crumbs-link__item"><a href="blank.html">По типу</a></li>
-            <li class="crumbs-link__item"><a href="blank.html">По популярности</a></li>
-
+        <aside class="sort-crumbs">
+          <h2 class="sort-crumbs__title">сортировка:</h2>
+          <ul class="sort-links list">
+            <li><a class="sort-link__item sort-link__item_activated">По цене</a></li>
+            <li><a class="sort-link__item" href="blank.html">По типу</a></li>
+            <li><a class="sort-link__item" href="blank.html">По популярности</a></li>
           </ul>
-
+          <ul class="triangle-list list">
+            <li><a class="triangle-up " href="blank.html"></a></li>
+            <li><a class="triangle-down triangle-active" href="blank.html"></a></li>
+          </ul>
         </aside>
       </div>
       <ul class="products-list list">
@@ -239,8 +240,8 @@
 
   <footer class="main-footer ">
     <div class="container">
-     <a href="index.html"> <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163" height="35"
-        alt="Логотип DEVICE"></a>
+      <a href="index.html"> <img class="main-footer__logo logo" src="img/index/svg/logo-device-yellow.svg" width="163"
+          height="35" alt="Логотип DEVICE"></a>
       <p class="main-footer__address ">г. Москва, ул. Строителей, 15 </p>
       <ul class="main-footer__navigation client-navigation list">
         <li><a class="client-navigation__item" href="index.html ">доставка</a></li>
@@ -250,7 +251,7 @@
       <ul class="main-footer__social-buttons list">
         <li><a class="main-footer__facebook" href="blank.html"></a></li>
         <li><a class="main-footer__instagram" href="blank.html"></a></li>
-        <li><a class="main-footer__twitter"href="blank.html"></a></li>
+        <li><a class="main-footer__twitter" href="blank.html"></a></li>
       </ul>
       <ul class="main-footer__client-navigation client-button list">
         <li><a class="main-footer__client-button client-login" href="blank.html">Валентин Петухов</a></li>
