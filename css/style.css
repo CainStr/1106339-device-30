@@ -42,9 +42,11 @@
   --pagination-color: #d9d9d9;
   --modal-background-color: #f2f2f2;
   --modal-background-color-hover: #eaeaea;
+  --modal-shadow:0 20px 40px rgba(0, 0, 0, .4);
   --range-controls-scale: #d7dcde;
   --range-controls-bar: #00ca74;
   --disable-checkbox: #a6a6a6;
+  --filter-title-color:#dcdcdc;
   --button-background: rgba(238, 238, 238, .7);
   --common-Gilroy: 'Gilroy', 'Arial', 'Verdana', sans-serif;
   --common-OpenSans: 'Open Sans', 'Arial', 'Verdana', sans-serif;
@@ -1129,7 +1131,9 @@ a {
 
 /*------- Модальное окно "Напишите нам "------- */
 
-.modal {
+
+
+.modal__write__us {
   position: fixed;
   top: 0;
   right: 0;
@@ -1139,19 +1143,21 @@ a {
   width: 960px;
   height: 560px;
   margin: auto;
-  transition: hidden 300ms, visibility 300ms linear;
   opacity: 0;
+  transition: opacity 300ms, visibility 300ms linear;
 }
 
 .modal.visible {
   visibility: visible;
   opacity: 1;
+
 }
 
-.modal-write-us__login-form {
+.modal__write__us__login-form {
   padding: 92px 100px 69px 100px;
   background-color: var(--basic-white);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  box-shadow: var(--modal-shadow);
+
 }
 
 .modal-name {
@@ -1173,7 +1179,7 @@ a {
   background-color: var(--modal-background-color);
 }
 
-.textaria {
+.textarea {
   width: 100%;
   height: 167px;
   padding-top: 16px;
@@ -1188,29 +1194,29 @@ a {
   background-color: var(--status);
 }
 
-.modal-input input:hover, .textaria:hover {
+.modal-input input:hover, .textarea:hover {
   background-color: var(--modal-background-color-hover);
 }
 
-.modal-input input:focus, .modal-text .textaria:focus {
+.modal-input input:focus, .modal-text .textarea:focus {
   border: 2px solid var(--special-yellow);
   outline: none;
   background-color: transparent;
 }
 
-.modal-input input::placeholder, .textaria::placeholder {
+.modal-input input::placeholder, .textarea::placeholder {
   font-family: var(--common-OpenSans);
   border: 2px solid transparent;
 }
 
-.modal-name label, .modal-write-us__text {
+.modal-name label, .modal__write__us__text {
   font-size: 18px;
   font-weight: 800;
   line-height: 22px;
   margin-bottom: 10px;
 }
 
-.modal-write-us__text {
+.modal__write__us__text {
   display: block;
   margin-bottom: 10px;
 }
@@ -1220,13 +1226,13 @@ a {
   margin-bottom: 27px;
 }
 
-.modal-write-us__button-send {
+.modal__write__us__button__send {
   display: block;
   width: 200px;
   margin-top: 42px;
 }
 
-.modal-write-us__button-exit {
+.modal__write__us__button__exit {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1241,7 +1247,7 @@ a {
   justify-content: center;
 }
 
-.modal-write-us__button-exit:after {
+.modal__write__us__button__exit:after {
   position: relative;
   width: 20px;
   height: 20px;
@@ -1249,15 +1255,15 @@ a {
   opacity: .5;
 }
 
-.modal-write-us__button-exit:hover, .modal-write-us__button-exit:after {
+.modal__write__us__button__exit:hover, .modal__write__us__button__exit:after {
   opacity: 1;
 }
 
-.modal-write-us__button-exit:active {
+.modal__write__us__button__exit:active {
   opacity: .3;
 }
 
-.modal-map {
+.modal__map {
   position: fixed;
   top: 0;
   right: 0;
@@ -1271,15 +1277,15 @@ a {
   transition: opacity 300ms, visibility 300ms linear;
   opacity: 0;
   background-image: url(../img/index/jpeg/map-big.jpg);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
+  box-shadow: var(--modal-shadow);
 }
 
-.modal-map.visible {
+.modal__map.visible {
   visibility: visible;
   opacity: 1;
 }
 
-.modal-map__button-exit {
+.modal__map__button__exit {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1294,7 +1300,7 @@ a {
   justify-content: center;
 }
 
-.modal-map__button-exit:after {
+.modal__map__button__exit:after {
   position: relative;
   width: 20px;
   height: 20px;
@@ -1302,11 +1308,11 @@ a {
   opacity: .5;
 }
 
-.modal-map__button-exit:hover, .modal-map__button-exit:after {
+.modal__map__button__exit:hover, .modal__map__button__exit:after {
   opacity: 1;
 }
 
-.modal-map__button-exit:active {
+.modal__map__button__exit:active {
   opacity: .3;
 }
 
@@ -1486,7 +1492,7 @@ a {
   text-align: center;
   letter-spacing: .1em;
   text-transform: uppercase;
-  background-color: #dcdcdc;
+  background-color: var(--filter-title-color);
 }
 
 .filter__item {
@@ -1994,4 +2000,5 @@ a {
   border: none;
   border-radius: 5px;
   background: transparent;
+  -moz-appearance:textfield;
 }
