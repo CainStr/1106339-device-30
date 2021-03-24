@@ -567,9 +567,11 @@ a {
   font-weight: 800;
   line-height: 58px;
   width: 431px;
-  height: min-content;
+  overflow: scroll;
+  max-height: 120px;
   margin-top: 92px;
   grid-area: main-slider__title;
+  margin-bottom: 0;
 }
 
 .main-slider__title::before {
@@ -593,6 +595,8 @@ a {
   line-height: 20px;
   margin-top: 34px;
   grid-area: main-slider__subtitle;
+  overflow: scroll;
+  max-height: 120px;
 }
 
 .button-more {
@@ -1896,6 +1900,10 @@ a {
 
 .products-page__link-back:active .span-opacity {
   opacity: .3;
+}
+
+.span-opacity {
+  color: var(--basic-black);
 }
 
 .products-page__link-next {
