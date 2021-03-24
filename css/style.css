@@ -42,11 +42,12 @@
   --pagination-color: #d9d9d9;
   --modal-background-color: #f2f2f2;
   --modal-background-color-hover: #eaeaea;
-  --modal-shadow:0 20px 40px rgba(0, 0, 0, .4);
+  --modal-shadow: 0 20px 40px rgba(0, 0, 0, .4);
   --range-controls-scale: #d7dcde;
   --range-controls-bar: #00ca74;
   --disable-checkbox: #a6a6a6;
-  --filter-title-color:#dcdcdc;
+  --price-controls-color: #283136;
+  --filter-title-color: #dcdcdc;
   --button-background: rgba(238, 238, 238, .7);
   --common-Gilroy: 'Gilroy', 'Arial', 'Verdana', sans-serif;
   --common-OpenSans: 'Open Sans', 'Arial', 'Verdana', sans-serif;
@@ -241,8 +242,20 @@ a {
   opacity: .3;
 }
 
+.search-form__input:hover::placeholder {
+  opacity: .6;
+}
+
+.search-form__input:hover::placeholder .search-form__button {
+  display: none;
+}
+
 .search-form__input:focus::placeholder {
   opacity: 1;
+}
+
+.search-form__input:focus .search-form__button {
+  display: block;
 }
 
 .search-form__button {
@@ -253,7 +266,16 @@ a {
   border: var(--black-border);
 }
 
-.search-form:focus-within .search-form__button, .search-form:hover .search-form__button {
+.search-form__button:hover {
+  background-color: var(--basic-black);
+  color: var(--basic-white);
+}
+
+.search-form__button:active .button-opacity {
+  opacity: .3;
+}
+
+.search-form:focus-within .search-form__button, .search-form__button:hover .search-form__button {
   display: block;
 }
 
@@ -396,11 +418,11 @@ a {
   grid-area: client-navigation__catalog;
 }
 
-.client-navigation__catalog:hover {
+.client-navigation__catalog:hover .catalog-text {
   opacity: .6;
 }
 
-.client-navigation__catalog:active {
+.client-navigation__catalog:active .catalog-text {
   opacity: .3;
 }
 
@@ -412,6 +434,7 @@ a {
   margin-left: 16px;
   content: '';
   background-image: url(../img/index/svg/icon_plus.svg);
+  opacity: 1;
 }
 
 .header-navigation {
@@ -754,16 +777,13 @@ a {
 }
 
 .features-buttons__list {
-  /* margin-left: 2px; */
   position: relative;
   display: grid;
   margin-top: 81px;
-  /* padding-left: 2px; */
   padding-right: 2px;
   grid-area: features-buttons__list;
   grid-template-columns: 1fr;
   grid-row-gap: 21px;
-  /* margin-right: 2px; */
 }
 
 .features-buttons__list::after {
@@ -887,7 +907,6 @@ a {
 }
 
 .contacts-button {
-  /* margin-left: 0px; */
   max-width: 260px;
   margin-top: auto;
 }
@@ -1131,8 +1150,6 @@ a {
 
 /*------- Модальное окно "Напишите нам "------- */
 
-
-
 .modal__write__us {
   position: fixed;
   top: 0;
@@ -1150,14 +1167,12 @@ a {
 .modal.visible {
   visibility: visible;
   opacity: 1;
-
 }
 
 .modal__write__us__login-form {
   padding: 92px 100px 69px 100px;
   background-color: var(--basic-white);
   box-shadow: var(--modal-shadow);
-
 }
 
 .modal-name {
@@ -1570,11 +1585,11 @@ a {
 /* ------------checkbox------------- */
 
 .custom-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
   position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  display: none;
 }
 
 .custom-checkbox+label {
@@ -1602,23 +1617,22 @@ a {
   justify-content: center;
 }
 
-.custom-checkbox+label:hover {
+.custom-checkbox:hover+label::before {
   opacity: .6;
-}
-
-.custom-checkbox+label:active {
-  opacity: 1;
 }
 
 .custom-checkbox:disabled+label {
   opacity: .4;
 }
 
+.custom-checkbox+label:active::before {
+  opacity: 1;
+}
+
 /* ------radio------- */
 
 .custom-radio {
   position: absolute;
-  z-index: -1;
   margin: 15px 0 0 9px;
   opacity: 0;
 }
@@ -1634,11 +1648,19 @@ a {
 }
 
 .custom-radio:disabled+label {
+  opacity: .25;
+}
+
+.custom-radio:disabled:hover+label, .custom-radio:disabled:hover+label {
+  opacity: .25;
+}
+
+.custom-radio:hover+label::before, .custom-radio:checked:hover+label::after {
   opacity: .6;
 }
 
-.custom-radio+label:hover {
-  opacity: .6;
+.custom-radio:active+label::before, .custom-radio:checked:active+label::after {
+  opacity: 1;
 }
 
 .custom-radio+label:focus {
@@ -1996,9 +2018,9 @@ a {
   right: -36px;
   display: flex;
   width: 80px;
-  color: #283136;
+  color: var(--price-controls-color);
   border: none;
   border-radius: 5px;
   background: transparent;
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
