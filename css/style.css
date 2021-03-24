@@ -1323,6 +1323,10 @@ a {
   opacity: .5;
 }
 
+.iframe {
+  border: 0;
+}
+
 .modal__map__button__exit:hover, .modal__map__button__exit:after {
   opacity: 1;
 }
